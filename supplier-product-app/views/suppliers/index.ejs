@@ -1,19 +1,16 @@
-<% layout('../layouts/main') %>
-<h1>Suppliers</h1>
-<a href="/suppliers/new">Add New Supplier</a>
-<table>
-  <tr><th>Name</th><th>Address</th><th>Phone</th><th>Actions</th></tr>
-  <% suppliers.forEach(supplier => { %>
-    <tr>
-      <td><%= supplier.name %></td>
-      <td><%= supplier.address %></td>
-      <td><%= supplier.phone %></td>
-      <td>
-        <a href="/suppliers/<%= supplier._id %>/edit">Edit</a>
-        <form action="/suppliers/<%= supplier._id %>?_method=DELETE" method="POST">
-          <button>Delete</button>
-        </form>
-      </td>
-    </tr>
-  <% }) %>
-</table>
+<%- include('../partials/header') %>
+    <h2>Suppliers</h2>
+    <a href="/suppliers/new">+ New Supplier</a>
+    <ul>
+        <% suppliers.forEach(s => { %>
+            <li>
+                <%= s.name %> -
+                    <%= s.phone %>
+                        <a href="/suppliers/<%= s._id %>/edit">Edit</a>
+                        <form action="/suppliers/<%= s._id %>?_method=DELETE" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+            </li>
+            <% }) %>
+    </ul>
+    <%- include('../partials/footer') %>

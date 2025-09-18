@@ -1,13 +1,21 @@
-<header>
-  <nav>
-    <a href="/">Home</a>
-    <% if (user) { %>
-      <a href="/suppliers">Suppliers</a>
-      <a href="/products">Products</a>
-      <a href="/auth/logout">Logout</a>
-    <% } else { %>
-      <a href="/auth/login">Login</a>
-      <a href="/auth/register">Register</a>
-    <% } %>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">🚀 CRUD App</h1>
+            <ul>
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/suppliers">Nhà Cung Cấp</a></li>
+                <li><a href="/products">Sản Phẩm</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>

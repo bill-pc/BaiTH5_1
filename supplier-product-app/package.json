@@ -1,23 +1,32 @@
 {
-  "name": "supplier-product-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "connect-flash": "^0.1.1",
-    "dotenv": "^17.2.2",
-    "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "express-session": "^1.18.2",
-    "method-override": "^3.0.0",
-    "mongoose": "^8.18.1"
-  },
-  "devDependencies": {}
+    "name": "node-mvc-crud-product-supplier",
+    "version": "1.0.0",
+    "description": "A Node.js MVC CRUD app for Supplier and Product using Express, MongoDB, and Mongoose",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "dev": "nodemon app.js"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "mongodb",
+        "mongoose",
+        "crud",
+        "mvc"
+    ],
+    "author": "Vo Ngoc Toan",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "dotenv": "^16.6.1",
+        "ejs": "^3.1.10",
+        "express": "^4.21.2",
+        "express-session": "^1.18.2",
+        "method-override": "^3.0.0",
+        "mongoose": "^8.3.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
+    }
 }

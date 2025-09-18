@@ -1,13 +1,14 @@
-<% layout('../layouts/main') %>
-<h1>New Product</h1>
-<form action="/products" method="POST">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="number" name="price" placeholder="Price" required>
-  <input type="number" name="quantity" placeholder="Quantity" required>
-  <select name="supplier" required>
-    <% suppliers.forEach(supplier => { %>
-      <option value="<%= supplier._id %>"><%= supplier.name %></option>
+<%- include('../partials/header') %>
+    <h2>New Product</h2>
+    <form action="/products" method="POST">
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="number" name="price" placeholder="Price"><br>
+        <input type="number" name="quantity" placeholder="Quantity"><br>
+        <select name="supplierId">
+    <% suppliers.forEach(s => { %>
+      <option value="<%= s._id %>"><%= s.name %></option>
     <% }) %>
-  </select>
-  <button>Submit</button>
-</form>
+  </select><br>
+        <button type="submit">Save</button>
+    </form>
+    <%- include('../partials/footer') %>
