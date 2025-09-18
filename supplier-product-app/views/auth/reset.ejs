@@ -1,0 +1,6 @@
+<% layout('../../layouts/main') %>
+<h1>Reset Password</h1>
+<form action="/auth/reset/<%= token %>" method="POST">
+  <input type="password" name="password" placeholder="New Password" required>
+  <button>Reset</button>
+</form>

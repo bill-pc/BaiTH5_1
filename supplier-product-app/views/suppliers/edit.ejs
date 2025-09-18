@@ -1,0 +1,8 @@
+<% layout('../layouts/main') %>
+<h1>Edit Supplier</h1>
+<form action="/suppliers/<%= supplier._id %>?_method=PUT" method="POST">
+  <input type="text" name="name" value="<%= supplier.name %>" required>
+  <input type="text" name="address" value="<%= supplier.address %>" required>
+  <input type="text" name="phone" value="<%= supplier.phone %>" required>
+  <button>Update</button>
+</form>

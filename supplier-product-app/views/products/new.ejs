@@ -1,0 +1,13 @@
+<% layout('../layouts/main') %>
+<h1>New Product</h1>
+<form action="/products" method="POST">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="number" name="price" placeholder="Price" required>
+  <input type="number" name="quantity" placeholder="Quantity" required>
+  <select name="supplier" required>
+    <% suppliers.forEach(supplier => { %>
+      <option value="<%= supplier._id %>"><%= supplier.name %></option>
+    <% }) %>
+  </select>
+  <button>Submit</button>
+</form>
